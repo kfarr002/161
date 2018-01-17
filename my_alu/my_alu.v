@@ -25,8 +25,8 @@ module my_alu #( parameter NUMBITS = 32)(
     input wire[NUMBITS-1:0]B,
     input wire[2:0]opcode,
     output reg[NUMBITS-1:0]result,
-    //output reg carryout,
-    //output reg overflow,
+    output reg carryout,
+    output reg overflow,
     output reg zero);
     
 
@@ -36,12 +36,12 @@ always@(*)begin
 c_result = 'd0 ; //Always set result. No latches
  case(opcode)
  3'd0 : c_result = A + B ;
- 3'd1 : c_result = A - B ;
- 3'd2 : c_result = $signed(A) + $signed(B) ;
+ 3'd1 : c_result = $signed(A) + $signed(B) ;
+ 3'd2 : c_result = A - B ;
  3'd3 : c_result = $signed(A) - $signed(B) ;
  3'd4 : c_result = A & B ;
  3'd5 : c_result = A | B ;
- 3'd6 : c_result = ~(A) ;
+ 3'd6 : c_result = A ^ B ;
  3'd7 : c_result = A << 1 ;
  endcase
  end

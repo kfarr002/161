@@ -16,4 +16,27 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///home/csmajs/kfarr002/Downloads/syllabus-161L-W18%20(1).docx" added="2018-01-17T23:41:56Z" modified="2018-01-17T23:41:56Z" visited="2018-01-17T23:41:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 5.0" exec="&apos;soffice %u&apos;" modified="2018-01-17T23:41:56Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/csmajs/kfarr002/Downloads/myalutb.v" added="2018-01-17T23:44:34Z" modified="2018-01-17T23:49:57Z" visited="2018-01-17T23:44:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-verilog"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2018-01-17T23:49:57Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>

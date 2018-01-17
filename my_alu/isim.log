@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/csmajs/kfarr002/my_alu/my_alu_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/csmajs/kfarr002/my_alu/my_alu_tb_isim_beh.wdb 
+Running: /home/csmajs/kfarr002/my_alu/myalutb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/csmajs/kfarr002/my_alu/myalutb_isim_beh.wdb 
 ISim P.68d (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to '2100@elguapo.cs.ucr.edu'.
@@ -32,3 +32,12 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+TC11 Unsigned Add 
+TC12 Unsigned Add 
+TC13 Unsigned Add 
+TC14 Unsigned Add 
+TC15 Unsigned Add 
+TC21 Unsigned subs 
+TC22 Unsigned subs 
+TC23 Unsigned subs 
+TC24 Unsigned subs 

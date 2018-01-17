@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-01-17T15:12:37</DateModified>
+  <DateModified>2018-01-17T15:46:44</DateModified>
   <ModuleName>my_alu</ModuleName>
-  <SummaryTimeStamp>2018-01-17T14:29:24</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-01-17T15:43:24</SummaryTimeStamp>
   <SavedFilePath>/home/csmajs/kfarr002/my_alu/iseconfig/my_alu.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/csmajs/kfarr002/my_alu</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/csmajs/kfarr002/my_alu/</ImplementationReportsDirectory>
   <DateInitialized>2018-01-17T14:06:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

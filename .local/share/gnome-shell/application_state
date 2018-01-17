@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
-    <application id="google-chrome.desktop" open-window-count="2" score="157" last-seen="1516231226"/>
-    <application id="org.gnome.gedit.desktop" open-window-count="1" score="0" last-seen="1516226221"/>
-    <application id="org.gnome.Terminal.desktop" open-window-count="2" score="8" last-seen="1516231223"/>
+    <application id="google-chrome.desktop" open-window-count="2" score="236" last-seen="1516232997"/>
+    <application id="org.gnome.gedit.desktop" open-window-count="1" score="12" last-seen="1516233052"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="2" score="38" last-seen="1516232171"/>
+    <application id="libreoffice-writer.desktop" open-window-count="1" score="2" last-seen="1516232530"/>
   </context>
 </application-state>

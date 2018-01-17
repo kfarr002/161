@@ -1,1 +1,4 @@
 xst -intstyle ise -ifn "/home/csmajs/kfarr002/my_alu/my_alu.xst" -ofn "/home/csmajs/kfarr002/my_alu/my_alu.syr" 
+xst -intstyle ise -ifn "/home/csmajs/kfarr002/my_alu/my_alu.xst" -ofn "/home/csmajs/kfarr002/my_alu/my_alu.syr" 
+xst -intstyle ise -ifn "/home/csmajs/kfarr002/my_alu/my_alu.xst" -ofn "/home/csmajs/kfarr002/my_alu/my_alu.syr" 
+xst -intstyle ise -ifn "/home/csmajs/kfarr002/my_alu/my_alu.xst" -ofn "/home/csmajs/kfarr002/my_alu/my_alu.syr" 

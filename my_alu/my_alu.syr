@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: my_alu.prj
@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -136,10 +136,13 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <my_alu>.
     Related source file is "my_alu.v".
+WARNING:Xst:1306 - Output <carryout> is never assigned.
+WARNING:Xst:1306 - Output <overflow> is never assigned.
     Found 32-bit register for signal <result>.
     Found 1-bit register for signal <zero>.
     Found 32-bit 8-to-1 multiplexer for signal <c_result>.
     Found 32-bit addsub for signal <c_result$addsub0000>.
+    Found 32-bit xor2 for signal <c_result$xor0000> created at line 44.
     Summary:
 	inferred  33 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
@@ -159,6 +162,8 @@ Macro Statistics
  32-bit register                                       : 1
 # Multiplexers                                         : 1
  32-bit 8-to-1 multiplexer                             : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
 
 =========================================================================
 
@@ -177,6 +182,8 @@ Macro Statistics
  Flip-Flops                                            : 33
 # Multiplexers                                         : 1
  32-bit 8-to-1 multiplexer                             : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
 
 =========================================================================
 
@@ -223,14 +230,14 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 102
+# IOs                              : 104
 
 Cell Usage :
 # BELS                             : 242
 #      GND                         : 1
 #      LUT2                        : 1
-#      LUT3                        : 94
-#      LUT4                        : 41
+#      LUT3                        : 63
+#      LUT4                        : 72
 #      MUXCY                       : 40
 #      MUXF5                       : 32
 #      VCC                         : 1
@@ -251,7 +258,7 @@ Selected Device : 3s100evq100-5
 
  Number of Slices:                       71  out of    960     7%  
  Number of 4 input LUTs:                136  out of   1920     7%  
- Number of IOs:                         102
+ Number of IOs:                         104
  Number of bonded IOBs:                 102  out of     66   154% (*) 
     IOB Flip Flops:                      33
  Number of GCLKs:                         1  out of     24     4%  
@@ -291,7 +298,7 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 9.485ns
+   Minimum input arrival time before clock: 9.476ns
    Maximum output required time after clock: 4.040ns
    Maximum combinational path delay: No path found
 
@@ -301,18 +308,18 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 5883 / 65
+  Total number of paths / destination ports: 5945 / 65
 -------------------------------------------------------------------------
-Offset:              9.485ns (Levels of Logic = 35)
-  Source:            opcode<0> (PAD)
+Offset:              9.476ns (Levels of Logic = 35)
+  Source:            opcode<1> (PAD)
   Destination:       zero (FF)
   Destination Clock: clk rising
 
-  Data Path: opcode<0> to zero
+  Data Path: opcode<1> to zero
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            96   1.106   1.242  opcode_0_IBUF (opcode_0_IBUF)
+     IBUF:I->O            65   1.106   1.234  opcode_1_IBUF (opcode_1_IBUF)
      LUT2:I0->O            1   0.612   0.357  c_result_mux00002 (c_result_mux0000)
      MUXCY:CI->O           1   0.051   0.000  Maddsub_c_result_addsub0000_cy<0> (Maddsub_c_result_addsub0000_cy<0>)
      MUXCY:CI->O           1   0.051   0.000  Maddsub_c_result_addsub0000_cy<1> (Maddsub_c_result_addsub0000_cy<1>)
@@ -349,7 +356,7 @@ Offset:              9.485ns (Levels of Logic = 35)
      MUXCY:CI->O           1   0.289   0.357  zero_or0000_wg_cy<8> (zero_or0000)
      FDR:R                     0.795          zero
     ----------------------------------------
-    Total                      9.485ns (6.570ns logic, 2.914ns route)
+    Total                      9.476ns (6.570ns logic, 2.906ns route)
                                        (69.3% logic, 30.7% route)
 
 =========================================================================
@@ -375,14 +382,14 @@ Offset:              4.040ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.99 secs
+Total CPU time to Xst completion: 4.03 secs
  
 --> 
 
 
-Total memory usage is 614056 kilobytes
+Total memory usage is 614280 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
