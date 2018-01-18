@@ -75,7 +75,7 @@ c_overflow = 'd0 ;
  3'd4 : {c_carryover,c_result} = {1'b0,A} & {1'b0,B} ;
  3'd5 : c_result = A | B ;
  3'd6 : c_result = A ^ B ;
- 3'd7 : c_result = A << 1 ;
+ 3'd7 : c_result = A >> 1 ;
  endcase
  end
  
