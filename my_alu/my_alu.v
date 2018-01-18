@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Kenneth Farrell
 // 
 // Create Date:    14:06:40 01/17/2018 
 // Design Name: 
@@ -43,7 +43,7 @@ c_overflow = 'd0 ;
 	 end
  3'd1 : begin
 	c_result = $signed(A) + $signed(B) ;
-        if((A[NUMBITS - 1] == B[NUMBITS - 1]) && (c_result[NUMBITS - 1] == A[NUMBITS - 1]))
+	 if((A[NUMBITS - 1] == B[NUMBITS - 1]) && (c_result[NUMBITS - 1] != A[NUMBITS - 1]))
 		begin
 			c_overflow = 1'b1 ;
 		end
@@ -68,7 +68,7 @@ c_overflow = 'd0 ;
 				begin
 				c_overflow = 1'b1 ;
 				end	
-
+//kf
 			end
 		  
 		  end
@@ -84,12 +84,14 @@ c_overflow = 'd0 ;
   if ( reset == 1'b1 ) begin
 		result <= 'd0 ;
 		zero   <= 'd0 ;
+	  	carryout <= c_carryover ;
+		overflow <= c_overflow ;
   end else begin
 		   result <= c_result ;
 			zero <= ( c_result == {NUMBITS{1'b0}}) ? 1'b1 : 1'b0 ;
-			carryout = c_carryover ;
-			overflow = c_overflow ;
-		 end
+			carryout <= c_carryover ;
+			overflow <= c_overflow ;
+		 end//kf
 		end
 		
 endmodule
